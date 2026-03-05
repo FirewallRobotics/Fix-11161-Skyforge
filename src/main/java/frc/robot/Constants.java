@@ -12,6 +12,8 @@ public final class Constants {
     public static final int COLLECTOR_ONE_ID = 5;
     public static final int COLLECTOR_TWO_ID = 6;
 
+    public static final double COLLECTOR_SPEED = 0.7;
+
     // Storage motor
     public static final int STORAGE_MOTOR_ID = 7;
 

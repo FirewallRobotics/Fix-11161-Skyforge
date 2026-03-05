@@ -1,13 +1,14 @@
 package frc.robot.subsystems;
 
-import com.revrobotics.CANSparkMax;
-import com.revrobotics.CANSparkMaxLowLevel.MotorType;
+import com.revrobotics.spark.SparkLowLevel.MotorType;
+import com.revrobotics.spark.SparkMax;
+
 import edu.wpi.first.wpilibj2.command.SubsystemBase;
 import frc.robot.Constants;
 
 public class StorageSubsystem extends SubsystemBase {
 
-    private final CANSparkMax storageMotor = new CANSparkMax(Constants.STORAGE_MOTOR_ID, MotorType.kBrushless);
+    private final SparkMax storageMotor = new SparkMax(Constants.STORAGE_MOTOR_ID, MotorType.kBrushless);
 
     public void feed(double speed) {
         storageMotor.set(speed);

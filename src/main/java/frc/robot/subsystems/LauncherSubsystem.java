@@ -1,13 +1,14 @@
 package frc.robot.subsystems;
 
-import com.revrobotics.CANSparkMax;
-import com.revrobotics.CANSparkMaxLowLevel.MotorType;
+import com.revrobotics.spark.SparkLowLevel.MotorType;
+import com.revrobotics.spark.SparkMax;
 import edu.wpi.first.wpilibj2.command.SubsystemBase;
 import frc.robot.Constants;
 
 public class LauncherSubsystem extends SubsystemBase {
 
-    private final CANSparkMax launcherMotor = new CANSparkMax(Constants.LAUNCHER_MOTOR_ID, MotorType.kBrushless);
+    // This year we found that REV dropped the "CAN" in all their definitions
+    private final SparkMax launcherMotor = new SparkMax(Constants.LAUNCHER_MOTOR_ID, MotorType.kBrushless);
 
     public void shoot(double speed) {
         launcherMotor.set(speed);
