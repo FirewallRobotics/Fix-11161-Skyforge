@@ -1,0 +1,23 @@
+package frc.robot;
+
+public final class Constants {
+
+    // Drive motors
+    public static final int LEFT_FRONT_ID = 1;
+    public static final int LEFT_REAR_ID = 2;
+    public static final int RIGHT_FRONT_ID = 3;
+    public static final int RIGHT_REAR_ID = 4;
+
+    // Collector motors
+    public static final int COLLECTOR_ONE_ID = 5;
+    public static final int COLLECTOR_TWO_ID = 6;
+
+    // Storage motor
+    public static final int STORAGE_MOTOR_ID = 7;
+
+    // Launcher motor
+    public static final int LAUNCHER_MOTOR_ID = 8;
+
+    // Inversion
+    public static final boolean RIGHT_SIDE_INVERTED = true;
+}

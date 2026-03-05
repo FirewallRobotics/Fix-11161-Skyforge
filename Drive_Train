@@ -1,0 +1,25 @@
+package frc.robot.subsystems;
+
+import edu.wpi.first.wpilibj2.command.SubsystemBase;
+import com.revrobotics.CANSparkMax;
+import com.revrobotics.CANSparkMaxLowLevel.MotorType;
+
+public class DriveSubsystem extends SubsystemBase {
+
+    // Replace IDs with your motor CAN IDs
+    private final CANSparkMax leftMotor = new CANSparkMax(1, MotorType.kBrushless);
+    private final CANSparkMax rightMotor = new CANSparkMax(2, MotorType.kBrushless);
+
+    public DriveSubsystem() {
+        // Optional: reset motors to defaults
+        leftMotor.restoreFactoryDefaults();
+        rightMotor.restoreFactoryDefaults();
+        rightMotor.setInverted(true); // usually you invert one side
+    }
+
+    // Tank drive method
+    public void drive(double leftSpeed, double rightSpeed) {
+        leftMotor.set(leftSpeed);
+        rightMotor.set(rightSpeed);
+    }
+}
