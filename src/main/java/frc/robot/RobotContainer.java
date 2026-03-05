@@ -12,17 +12,19 @@ public class RobotContainer {
         // TODO for this project to build:
         // 1) fix imports
         //      - REV this year dropped using "CAN" in their function definitions so that needs to be removed
+        //      - See StorageSubsystem and LauncherSubsystem for examples on how to fix
         // 2) figure and fix the error with auto (I've commented it out for now)
 
         // TODO: Recomendations:
-        // 1) Move controller over to being command based for simplicity
+        // 1) Verify motor IDs and make sure your motors are correctly defined.
+        // 2) Move controller over to being command based for simplicity
         //      - https://docs.wpilib.org/en/stable/docs/software/commandbased/binding-commands-to-triggers.html
         //      - Wish they showed that they are using "CommandXboxController" not just "XboxController" :/
         //      - See example that I did below
-        // 2) Move towards using commands instead of using "RunCommand."
+        // 3) Move towards using commands instead of using "RunCommand."
         //      - With the current system I don't think it will stop the motors?
         //      - See example I did with enabling the collector
-        // 3) Fix deprecations
+        // 4) Fix deprecations
         //      - This won't really affect functionality but its a good practice to stay up to date for future years
         //      3a) The scheduler is now global so to schedule a command you have to use: "CommandScheduler.getInstance().schedule(Command...)"
         //      3b) Add a motor follower instead of using "MotorControllerGroup"
